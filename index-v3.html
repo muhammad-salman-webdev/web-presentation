@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Project - OnScroll Animations</title>
+
+    <style>
+      /* Resetting the Browser Rendered Styles  */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html::-webkit-scrollbar {
+        width: 0;
+      }
+
+      body {
+        height: 800vh;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 100vh;
+        background: red;
+        transition: all 1s ease;
+        border: green 5px solid;
+        transform: scale(0.3);
+
+        &.active {
+          top: 0;
+          transform: scale(1) rotate(360deg);
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="active">
+      <img src="assets/images/section-01.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-02.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-03.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-04.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-05.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-06.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-07.png" alt="#" />
+    </section>
+    <section>
+      <img src="assets/images/section-08.png" alt="#" />
+    </section>
+  </body>
+  <script src="assets/js/script.js"></script>
+</html>
