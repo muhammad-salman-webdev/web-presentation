@@ -1,0 +1,831 @@
+/* Resetting the Browser Rendered Styles  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    height: 2000vh;
+}
+
+.gradient-color {
+    background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 100vh;
+    transition: all 1s ease;
+    transform: scale(0.3) translate(100vw 100vh);
+
+    &.active {
+        top: 0;
+        transform: scale(1) translate(0);
+        /* z-index: 999; */
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+/* First Section - Chart Section CSS Starts */
+.chart_section {
+
+    /* background: #F9F9F9; */
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background: url('../images/section-01/dotted_bg.jpeg');
+        background-size: cover;
+        opacity: .05;
+    }
+
+    .container {
+        margin: 0 auto;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+
+        /* Header */
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+
+            h3 {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                p {
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                font-size: 65px;
+                font-weight: 700;
+                line-height: 81.25px;
+
+                p {
+                    color: #272727
+                }
+            }
+
+            .header-btn a {
+                display: block;
+                font-size: 25px;
+                padding: 20px 30px;
+                font-weight: 400;
+                background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+                color: white;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        }
+
+        /* Chart */
+        .chart-container {
+            height: 100%;
+            width: 100%;
+            max-width: 1400px;
+            padding: 0 0 50px 0;
+
+            #chart {
+                height: 100%;
+            }
+        }
+
+        /* Footer */
+        .chart-footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            .logos {
+                display: flex;
+                gap: 20px;
+
+                .logo {
+                    width: 100px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .chart-stats-data {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                &>div {
+                    display: flex;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/* First Section - Chart Section CSS Ends */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* Second Section - Team Section CSS Starts */
+.team_section {
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background-image: url('../images/section-01/dotted_bg.jpeg');
+        background-size: cover;
+        opacity: .05;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        inset: 0;
+        position: absolute;
+        /* opacity: .05; */
+        background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+    }
+
+    .container {
+        margin: 0 auto;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        z-index: 3;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1 {
+                font-size: 84px;
+                font-weight: 700;
+                text-align: center;
+                color: white;
+            }
+
+            p {
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 40.32px;
+                text-align: center;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding-bottom: 100px;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                cursor: default;
+
+                &:hover .img {
+                    transform: scale(1.3) translateY(-50px);
+                    box-shadow: 0 0 50px white;
+                }
+
+                .img {
+                    width: 325px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    transition: all .5s ease;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h2 {
+                    font-size: 60px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                p {
+                    color: #3E3B3B;
+                    font-size: 44px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Second Section - Team Section CSS Ends */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* Third Section - Business Section CSS Starts */
+.business_section {
+    .bg_video {
+        position: absolute;
+        inset: 0;
+
+        video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            opacity: 0;
+            transition: all 1s ease;
+            transform: scale(2);
+
+            &.active {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        max-width: 1600px;
+
+        &>h1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 68.75px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .change-tab-btns {
+            display: flex;
+            width: 100%;
+            gap: 50px;
+            margin-top: 50px;
+
+            .tab-btn {
+                user-select: none;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                cursor: pointer;
+
+                .img {
+                    width: 50px
+                }
+
+                span {
+                    min-width: max-content;
+                    font-size: 44px;
+                    font-weight: 500;
+                    line-height: 55.99px;
+                    color: #F9F9F9;
+                    transition: all .3s ease;
+                }
+
+                &.active span {
+                    color: #737BFC;
+                }
+            }
+        }
+
+        .business-cards-container {
+            display: flex;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin-top: 50px;
+
+            .business-card {
+                position: absolute;
+                background: linear-gradient(90deg, hsla(176, 98%, 48%, 0.5) 0%, hsl(236, 96%, 72%, 0.5) 100%);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                opacity: 0;
+                transition: all 1s ease;
+                padding: 115px 0;
+                transform: scale(1.3) translateY(500px);
+
+                &.active {
+                    transform: scale(1) translateY(0px);
+                    opacity: 1;
+                    z-index: 3;
+                }
+
+                .description {
+                    width: 50%;
+                    padding: 0 50px;
+                    border-right: 3px solid white;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    height: 100%;
+                    font-size: 25px;
+                    font-weight: 500;
+                    line-height: 31.25px;
+                }
+
+                .divider {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    bottom: 50px;
+
+                    span {
+                        font-size: 25px;
+                        font-weight: 500;
+                        line-height: 31.25px;
+                        color: white;
+                    }
+                }
+
+                .logo {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 375px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Third Section - Business Section CSS Ends */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* Fourth Section - Products Section CSS Starts */
+.products_section {
+    background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background: url('../images/section-04/bg-img.png');
+        background-position: left bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* background: red; */
+        margin: 0 auto;
+        position: absolute;
+        inset: 0;
+        padding: 50px;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: 84px;
+            font-weight: 700;
+            line-height: 104.83px;
+            color: white;
+        }
+
+        .change-tab-buttons {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            padding-left: 80px;
+            max-width: max-content;
+            height: 100%;
+            justify-content: center;
+            gap: 35px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 15%;
+                bottom: 15%;
+                width: 20px;
+                background: white;
+                border-radius: 10px;
+            }
+
+            .btn {
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 62.37px;
+                color: white;
+                transition: all .3s ease;
+                cursor: pointer;
+                user-select: none;
+
+                p {
+                    transition: all .3s ease;
+                    transform-origin: left;
+                }
+
+                sup {
+                    transition: all .3s ease;
+                    color: #272727;
+                    font-size: 25.66px;
+                    font-weight: 500;
+                    line-height: 32.08px;
+                    margin: 0px 0 0 -5px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 50px;
+                    aspect-ratio: 1/1;
+                    background: white;
+                    border-radius: 50%;
+                    transform: translate(-20px, -2px);
+                    transition: all .3s ease;
+                    border: 5px solid white;
+                    box-shadow: 0 0 20px white;
+                }
+
+                &:hover {
+                    color: #737BFC;
+                }
+
+                &.active {
+                    color: #737BFC;
+
+                    &::before {
+                        background: #737BFC;
+                        box-shadow: 0 0 20px #737BFC;
+                        transform: scale(1.2) translate(-16px, 0px);
+                    }
+
+                    p {
+                        transform: scale(1.2);
+                    }
+
+                    sup {
+                        transition: all .3s ease;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .products-tabs-container {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: grid;
+            place-items: center;
+
+            .product-tab {
+                position: absolute;
+                opacity: 0;
+                transition: all .6s ease;
+
+                &.active {
+                    opacity: 1;
+
+                    .quote {
+                        transform: scale(1) translateY(00px);
+                        opacity: 1;
+                    }
+                }
+
+                .quote {
+                    position: absolute;
+                    right: -700px;
+                    top: -150px;
+                    font-size: 32.25px;
+                    font-weight: 500;
+                    line-height: 40.32px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: black;
+                    width: 500px;
+                    transform: scale(0.5) translateY(-200px);
+                    transition: all .8s ease;
+                    opacity: 0;
+
+                    .logo {
+                        width: 175px;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .author {
+                        margin-top: 10px;
+                    }
+                }
+
+                .slides-box {
+                    background: rgba(255, 255, 255, 0.562);
+                    width: 210px;
+                    aspect-ratio: 1/1;
+                    display: grid;
+                    place-items: center;
+                    box-shadow: 0 0 0px 0px #ffffff2b, 0 0 0px 0px #ffffff38;
+                    transform: rotate(-45deg) scale(.3);
+                    transition: all 1.5s ease;
+
+                    i {
+                        transform: rotate(-45deg);
+                        font-size: 50px;
+                        cursor: pointer;
+                        transition: all .4s ease;
+
+                        &:hover {
+                            transform: scale(1.5) rotate(-45deg);
+                        }
+                    }
+                }
+
+                .popup {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    background: #737BFC;
+                    padding: 40px;
+                    width: 550px;
+                    z-index: 5;
+                    box-shadow: 0 0 10px white;
+                    border-radius: 4px;
+                    gap: 20px;
+                    left: 230px;
+                    top: 180px;
+                    opacity: 0;
+                    transform: translateY(-100px) scale(.8);
+                    transition: all .6s ease;
+
+                    &.active {
+                        transform: translateY(00px) scale(1);
+                        opacity: 1 !important;
+                    }
+
+                    h3 {
+                        color: white;
+                        font-size: 50px;
+                        font-weight: 600;
+                        line-height: 62.37px;
+                        text-align: left;
+                    }
+
+                    p {
+                        color: white;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 22.5px;
+                        text-align: left;
+                    }
+
+                    .close-btn {
+                        position: absolute;
+                        right: 30px;
+                        top: 20px;
+                        color: white;
+                        font-size: 50px;
+                        cursor: pointer;
+                    }
+                }
+
+                &.active {
+                    z-index: 3;
+
+                    .slides-box {
+                        box-shadow: 0 0 0px 50px #ffffff2b, 0 0 0px 100px #ffffff38;
+                        transform: scale(1) rotate(45deg);
+
+                        &:hover {
+                            transform: scale(1.2) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 50px;
+            position: absolute;
+            right: 50px;
+            bottom: 80px;
+
+            .logo {
+                width: 125px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .footer-text {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 40px;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 31.25px;
+            color: black;
+        }
+    }
+}
+
+/* Fourth Section - Products Section CSS Ends */
+/* ############## */
+/* ############## */
+/* ############## */
+/* ############## */
+.genAI_section {
+
+    /* background: #F9F9F9; */
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background: url('../images/section-01/dotted_bg.jpeg');
+        background-size: cover;
+        opacity: .05;
+    }
+
+    .container {
+        margin: 0 auto;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        max-width: 1400px;
+
+        .title {
+            font-size: 84px;
+            font-weight: 700;
+            line-height: 104.83px;
+        }
+
+        .genAi-container {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 50px;
+            border-bottom: 2px solid black;
+            display: flex;
+            align-items: end;
+            position: relative;
+
+            >p {
+                width: 100%;
+                position: absolute;
+                bottom: 20px;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+                line-height: 31.25px;
+            }
+
+            .circle {
+                width: 425px;
+                aspect-ratio: 1/1;
+                background: pink;
+                border-radius: 50%;
+                margin: 0 auto 150px;
+                position: relative;
+
+                .btn-tabs-container {
+                    /* z-index: 2; */
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    position: absolute;
+                    background: red;
+
+                    .btn-tab {
+                        position: absolute;
+                        /* opacity: 0; */
+                    }
+                }
+
+                .images {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        .footer-logos {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logos {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .logo {
+                    width: 100px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
