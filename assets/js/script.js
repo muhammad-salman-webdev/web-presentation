@@ -161,3 +161,51 @@ productsTabs.forEach((tab, i) => {
     popup.classList.toggle("active");
   });
 });
+
+// GenAi Section
+const tabBtns = document.querySelectorAll(
+  ".genAI_section .btn-tabs-container > .btn-tab"
+);
+
+const tabImgs = document.querySelectorAll(
+  ".genAI_section .genAi-container .images img"
+);
+
+tabBtns.forEach((tab, i) => {
+  tab.querySelector(".btn").addEventListener("click", () => {
+    // ---
+    tabBtns.forEach((t) => t.classList.remove("active"));
+    tabImgs.forEach((img) => img.classList.remove("active"));
+    // ---
+    tabBtns[i].classList.add("active");
+    tabImgs[i].classList.add("active");
+  });
+});
+
+function checkOrientation() {
+  if (window.matchMedia("(orientation: landscape)").matches) {
+    // rotateMessage.style.display = "none";
+    setTimeout(() => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        // Firefox
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        // Chrome, Safari and Opera
+        document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        // IE/Edge
+        document.documentElement.msRequestFullscreen();
+      }
+    }, 1000);
+  } else {
+    // rotateMessage.style.display = "block";
+  }
+}
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("orientationchange", checkOrientation);
+document.body.addEventListener("click", checkOrientation);
+// Initial check
+checkOrientation();

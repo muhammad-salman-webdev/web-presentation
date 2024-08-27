@@ -43,8 +43,6 @@ section {
 
 /* First Section - Chart Section CSS Starts */
 .chart_section {
-
-    /* background: #F9F9F9; */
     &::before {
         content: '';
         inset: 0;
@@ -770,7 +768,7 @@ section {
             .circle {
                 width: 425px;
                 aspect-ratio: 1/1;
-                background: pink;
+                background: rgb(41, 9, 15);
                 border-radius: 50%;
                 margin: 0 auto 150px;
                 position: relative;
@@ -781,11 +779,152 @@ section {
                     aspect-ratio: 1/1;
                     border-radius: 50%;
                     position: absolute;
-                    background: red;
 
                     .btn-tab {
                         position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+
+                        &.active {
+                            .btn {
+                                transform: scale(1.2);
+                                box-shadow: 0px 4px 30px 0px #737BFC;
+                            }
+
+                            .tab {
+                                transform: translateY(00px) scale(1);
+                                opacity: 1;
+                                z-index: 2;
+                            }
+                        }
+
+                        .btn {
+                            transition: all .3s ease;
+                            background: #ffffff;
+                            width: 36px;
+                            aspect-ratio: 1/1;
+                            border-radius: 50%;
+                            border: 1px solid #737BFC;
+                            z-index: 2;
+                            cursor: pointer;
+                            position: absolute;
+                        }
+
+                        .tab {
+                            position: absolute;
+                            width: 220px;
+                            text-align: center;
+                            transition: all .5s ease;
+                            transform: translateY(-60px) scale(.8);
+                            opacity: 0;
+                            z-index: -1;
+
+                            h3 {
+                                font-size: 30px;
+                                font-weight: 700;
+                                line-height: 37.5px;
+                                color: #737BFC;
+
+                                sup {
+                                    font-size: 22px;
+                                    margin-left: -6px;
+                                }
+                            }
+
+                            p {
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 22.5px;
+                                color: black;
+                                margin-top: 10px;
+                            }
+                        }
+
                         /* opacity: 0; */
+                        &:nth-child(1) {
+                            .btn {
+                                top: 302px;
+                                left: -8%;
+                            }
+
+                            .tab {
+                                left: -63%;
+                                top: 200px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            .btn {
+                                top: 142px;
+                                left: -11%;
+                            }
+
+                            .tab {
+                                left: -63%;
+                                top: 30px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .btn {
+                                top: 5px;
+                                left: 9%;
+                            }
+
+                            .tab {
+                                left: -44%;
+                                top: -100px;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            .btn {
+                                top: -50px;
+                                left: 44%;
+                            }
+
+                            .tab {
+                                left: 24%;
+                                top: -180px;
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            .btn {
+                                top: 3px;
+                                right: 10%;
+                            }
+
+                            .tab {
+                                left: 90%;
+                                top: -110px;
+                            }
+                        }
+
+                        &:nth-child(6) {
+                            .btn {
+                                top: 141px;
+                                right: -11%;
+                            }
+
+                            .tab {
+                                right: -63%;
+                                top: 24px;
+                            }
+                        }
+
+                        &:nth-child(7) {
+                            .btn {
+                                top: 295px;
+                                right: -8%;
+                            }
+
+                            .tab {
+                                right: -64%;
+                                top: 190px;
+                            }
+                        }
                     }
                 }
 
@@ -799,6 +938,43 @@ section {
                     img {
                         width: 100%;
                         position: absolute;
+                        opacity: 0;
+                        transform: scale(2);
+                        transition: all .8s ease;
+
+                        &.active {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+                }
+
+                .circle_borders {
+                    /* background: red; */
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                    aspect-ratio: 1/1;
+                    width: 120%;
+                    user-select: none;
+
+                    .circle_border {
+                        position: absolute;
+                        top: 46px;
+                        left: -42px;
+                    }
+
+                    .left_border {
+                        position: absolute;
+                        bottom: -22px;
+                        left: -92.7%;
+                    }
+
+                    .right_border {
+                        position: absolute;
+                        bottom: -22px;
+                        right: -76.5%;
                     }
                 }
             }
