@@ -15,6 +15,11 @@ body {
     height: 2000vh;
 }
 
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 .gradient-color {
     background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
     background-clip: text;
@@ -29,6 +34,12 @@ section {
     top: 100vh;
     transition: all 1s ease;
     transform: scale(0.3) translate(100vw 100vh);
+    background-color: #fff;
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
 
     &.active {
         top: 0;
@@ -717,6 +728,7 @@ section {
 /* ############## */
 /* ############## */
 /* ############## */
+/* Fifth Section - GenAI Section CSS Starts */
 .genAI_section {
 
     /* background: #F9F9F9; */
@@ -941,6 +953,7 @@ section {
                         opacity: 0;
                         transform: scale(2);
                         transition: all .8s ease;
+                        height: 100%;
 
                         &.active {
                             opacity: 1;
@@ -1005,3 +1018,386 @@ section {
         }
     }
 }
+
+/* Fifth Section - GenAI Section CSS Ends */
+/* ############## */
+/* ############## */
+/* ############## */
+/* ############## */
+/* Sixth Section - AI Services Section CSS Starts */
+.ai_services_section {
+    background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+
+    .container {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+
+        .rocket-icon {
+            width: 100px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+
+            p {
+                font-size: 25px;
+                font-weight: 500;
+                line-height: 31.25px;
+                text-align: center;
+                color: black;
+            }
+        }
+
+        .title {
+            font-size: 83.86px;
+            font-weight: 700;
+            line-height: 104.83px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            margin: 50px 0;
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-size: 25px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 31.25px;
+            color: black;
+            gap: 14px;
+
+            .imgs {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: 25px;
+
+                img {
+                    width: 50px;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    margin-left: -25px;
+                }
+            }
+        }
+
+        .services-container {
+            display: flex;
+            margin: auto auto 80px;
+            justify-content: space-between;
+
+            .service-container {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+
+                .img {
+                    margin-bottom: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &:nth-child(1) {
+                    img {
+                        width: 120%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    img {
+                        width: 80%;
+                    }
+                }
+
+                h3 {
+                    color: white;
+                    font-size: 40px;
+                    font-weight: 600;
+                    line-height: 50px;
+                    text-align: center;
+                    margin: auto 0 40px;
+                }
+
+                a {
+                    display: grid;
+                    place-items: center;
+                    margin: 0 auto;
+                    color: white;
+                    font-size: 24px;
+                    border-radius: 50%;
+                    background: #737BFC;
+                    width: 50px;
+                    aspect-ratio: 1/1;
+                }
+
+                .powered-by {
+                    text-align: center;
+                    margin: 30px 0 0;
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 31.25px;
+                    color: white;
+
+                    p sup {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Sixth Section - AI Services Section CSS Ends */
+/* ######################## */
+/* ######################## */
+/* ######################## */
+/* ######################## */
+/* Seventh Section - PartnerShip Models Section CSS Starts */
+.partner_section {
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background: url('../images/section-01/dotted_bg.jpeg');
+        background-size: cover;
+        opacity: .05;
+    }
+
+    .container {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+
+        .label {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            max-width: 250px;
+            font-size: 18px;
+            font-weight: 600;
+            color: black;
+            line-height: 22.5px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 83.86px;
+            font-weight: 700;
+            line-height: 104.83px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .models-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1600px;
+            width: 90%;
+            margin: auto auto 100px;
+
+            .model {
+                width: 30%;
+
+                &:nth-child(1) {
+                    .model-img {
+                        .img img {
+                            width: 88%;
+                            position: absolute;
+                            top: 10px;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .model-img {
+                        background:
+                            #525BF1;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .model-img {
+                        .img img {
+                            position: absolute;
+                            top: 25px;
+                            width: 76%;
+                        }
+                    }
+                }
+
+                .model-img {
+                    background: #737BFC;
+                    aspect-ratio: 1/1;
+                    position: relative;
+
+                    .img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        aspect-ratio: 1/1;
+
+                        img {
+                            width: 90%;
+                        }
+                    }
+
+                    .content {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 20px;
+                        right: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: end;
+
+                        &>div {
+                            text-transform: uppercase;
+
+                            p {
+                                color: white;
+                                font-size: 20px;
+                                min-width: max-content;
+                                font-weight: 600;
+                                line-height: 25px;
+                            }
+
+                            span {
+                                color: #FFB000;
+                                font-size: 20px;
+                                font-weight: 600;
+                                line-height: 25px;
+                            }
+                        }
+
+                        a {
+                            font-size: 26px;
+                            color: white;
+                        }
+                    }
+                }
+
+                h2 {
+                    text-align: center;
+                    font-size: 65px;
+                    font-weight: 600;
+                    line-height: 81.25px;
+                    margin: 35px 0 15px;
+                }
+
+                p {
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 37.5px;
+                    text-align: left;
+                    max-width: 260px;
+                    margin: 0 auto;
+                }
+
+                .graph {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin: 30px 0px;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+
+                &>a {
+                    display: block;
+                    max-width: max-content;
+                    margin: 0 auto;
+                    border-radius: 30px;
+                    padding: 16px 30px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 500;
+                    background: linear-gradient(180deg, #02F1E2 0%, #737BFC 100%);
+                }
+            }
+        }
+    }
+}
+
+/* Seventh Section - PartnerShip Models Section CSS Ends */
+/* ########## */
+/* ########## */
+/* ########## */
+/* ########## */
+/* Eight Section - Market Advantage Section CSS Starts */
+.advantage_section {
+    &::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+    }
+
+    .container {
+        position: absolute;
+        inset: 0;
+
+        .title {
+            font-size: 83.86px;
+            font-weight: 700;
+            line-height: 104.83px;
+            text-align: center;
+            color: white;
+            margin: 100px 0 50px;
+        }
+
+        .advanctages-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 125px;
+            gap: 100px;
+
+            .advantages {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+
+                .advantage {
+                    display: flex;
+                    gap: 80px;
+
+                    img {
+                        width: 260px;
+                        aspect-ratio: 1/1;
+                    }
+
+                    &:nth-child(2) {
+                        margin-left: -100px;
+                    }
+                }
+            }
+
+            .l-circle {
+
+                /* width: 100%; */
+                img {
+                    width: 750px;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}
+
+/* Eight Section - Market Advantage Section CSS Ends */
