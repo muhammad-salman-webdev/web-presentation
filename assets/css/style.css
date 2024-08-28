@@ -1380,6 +1380,7 @@ section {
                     img {
                         width: 260px;
                         aspect-ratio: 1/1;
+                        border-radius: 50%;
                     }
 
                     &:nth-child(2) {
