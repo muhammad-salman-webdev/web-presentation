@@ -8,11 +8,11 @@
 }
 
 html::-webkit-scrollbar {
-    width: 0;
+    /* width: 0; */
 }
 
 body {
-    height: 2000vh;
+    height: 20000vh;
 }
 
 img {

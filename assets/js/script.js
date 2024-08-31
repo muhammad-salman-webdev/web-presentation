@@ -2,7 +2,7 @@
 const sections = document.querySelectorAll("section");
 
 // Variable to store the previous vertical scroll position
-let oldScrollY = window.innerHeight * 4;
+let oldScrollY = window.innerHeight * 400;
 
 // Variable to track the currently active section's index
 let activeSectionIndex = 0;
