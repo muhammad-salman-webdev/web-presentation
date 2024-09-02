@@ -2,7 +2,8 @@
 const sections = document.querySelectorAll("section");
 
 // Variable to store the previous vertical scroll position
-let oldScrollY = window.innerHeight * 400;
+let oldScrollY = window.innerHeight * 80;
+console.log(oldScrollY);
 
 // Variable to track the currently active section's index
 let activeSectionIndex = 0;
@@ -97,6 +98,8 @@ setTimeout(() => {
     // Set the scrolling behavior to instant to immediately scroll to the target position
     behavior: "instant",
   });
+  // Prevent the browser from restoring the last scroll position on refresh
+  history.scrollRestoration = "manual";
 }, 10);
 
 // Business Section
