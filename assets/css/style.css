@@ -240,11 +240,135 @@ section {
         .chart-container {
             height: 100%;
             width: 100%;
-            max-width: 1400px;
-            padding: 0 0 50px 0;
+            max-width: 1600px;
+            padding: 0 0 0px 0;
 
+            /* background: red; */
             #chart {
                 height: 100%;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                transform: scale(.8);
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    bottom: 150px;
+                    height: 20px;
+                    background: #b7b7b7;
+                    position: absolute;
+                }
+
+                .chart_item {
+                    display: flex;
+                    align-items: end;
+                    width: 130px;
+                    position: relative;
+                    margin: 100px 0;
+
+                    &::before {
+                        content: '';
+                        background: white;
+                        width: 100%;
+                        position: absolute;
+                        aspect-ratio: 1/1;
+                        bottom: 0;
+                        transform: scale(1.2);
+                        display: block;
+                        border-radius: 0 0 50% 50%;
+                        /* z-index: -3; */
+                    }
+
+                    .item-body {
+                        background-color: #3d3d3d;
+                        background-color: #7da4fc;
+                        background: linear-gradient(0deg, #02F1E2 -8.1%, #737BFC 74.68%);
+                        flex-direction: column;
+                        display: flex;
+                        position: absolute;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        height: 60%;
+                        height: var(--height);
+                        border-radius: 500px;
+                        z-index: 1;
+                        transition: all .3s ease;
+
+                        &::before {
+                            content: '';
+                            background: white;
+                            width: 100%;
+                            position: absolute;
+                            aspect-ratio: 1/1;
+                            bottom: 0;
+                            transform: scale(.7);
+                            border-radius: 100%;
+                            display: block;
+                            transition: all .3s ease;
+                        }
+
+                        .popup {
+                            position: absolute;
+                            /* display: none; */
+                            width: 280px;
+                            gap: 10px;
+                            left: -48%;
+                            display: none;
+                            text-align: center;
+                            font-family: Inter;
+                            flex-direction: column;
+                            display: flex;
+                            opacity: 0;
+                            top: -350px;
+                            transition: all .3s ease;
+                            background: white;
+                            border-radius: 5px;
+
+                            h2 {
+                                font-size: 26px;
+                                font-weight: 600;
+                                font-family: Inter;
+                                text-align: center;
+                            }
+
+                            p {
+                                font-size: 20px;
+                            }
+                        }
+
+                        span {
+                            font-family: Inter;
+                            font-weight: 900;
+                            font-size: 40px;
+                        }
+
+                        .text {
+                            position: absolute;
+                            bottom: -50px;
+                            font-size: 28px;
+                            font-weight: 600;
+                            font-family: Inter;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+
+                    &:hover {
+                        .item-body {
+                            background-color: #091b30;
+                            background-color: #4f81f7;
+                            background: linear-gradient(0deg, #02F1E2 -18.1%, #737BFC 100.68%);
+                            height: calc(var(--height) + 5%);
+
+                            .popup {
+                                top: -200px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
 
