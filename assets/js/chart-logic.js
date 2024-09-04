@@ -51,7 +51,6 @@ const maxValue = Chart_data.reduce(
   Chart_data[0].value
 );
 
-console.log("The highest value is:", maxValue);
 Chart_data.forEach((itemData) => {
   const heightPer = (itemData.value / maxValue) * 100;
   const ItemHTML = `

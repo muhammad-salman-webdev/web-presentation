@@ -3,7 +3,6 @@ const sections = document.querySelectorAll("section");
 
 // Variable to store the previous vertical scroll position
 let oldScrollY = window.innerHeight * 80;
-console.log(oldScrollY);
 
 // Variable to track the currently active section's index
 let activeSectionIndex = 0;
@@ -21,6 +20,8 @@ function moveSections() {
   // Get the current vertical scroll position of the window
   const scrollY = window.scrollY;
 
+  // $$$$$$
+  // $$$$$$
   if (!time) {
     oldScrollY = scrollY;
     // Exit the function early if we are in the cooldown period to prevent rapid section changes
@@ -82,7 +83,7 @@ function moveSections() {
   setTimeout(() => {
     // After 500ms, allow the next scroll event to be handled
     time = true;
-  }, 500);
+  }, 1500);
 }
 
 // Attach the moveSections function to the scroll event on the window object
@@ -100,7 +101,7 @@ setTimeout(() => {
   });
   // Prevent the browser from restoring the last scroll position on refresh
   history.scrollRestoration = "manual";
-}, 10);
+}, 1);
 
 // Business Section
 const bsnBtns = document.querySelectorAll(
@@ -184,56 +185,3 @@ tabBtns.forEach((tab, i) => {
     tabImgs[i].classList.add("active");
   });
 });
-
-function checkOrientation() {
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    // rotateMessage.style.display = "none";
-    setTimeout(() => {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.mozRequestFullScreen) {
-        // Firefox
-        document.documentElement.mozRequestFullScreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        // Chrome, Safari and Opera
-        document.documentElement.webkitRequestFullscreen();
-      } else if (document.documentElement.msRequestFullscreen) {
-        // IE/Edge
-        document.documentElement.msRequestFullscreen();
-      }
-    }, 1000);
-  } else {
-    // rotateMessage.style.display = "block";
-  }
-}
-
-// window.addEventListener("resize", checkOrientation);
-// window.addEventListener("orientationchange", checkOrientation);
-// document.body.addEventListener("click", checkOrientation);
-// // Initial check
-// checkOrientation();
-
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
-// ##############
