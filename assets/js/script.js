@@ -232,6 +232,8 @@ menuBar.addEventListener("click", toggleNav);
 allNavLinks.map((curElem, i) => {
   curElem.addEventListener("click", () => {
     toggleNav();
+    allNavLinks.forEach((a) => a.classList.remove("active"));
+    curElem.classList.add("active");
     sections.forEach((section) => {
       // Remove the 'active' class from each section
       section.classList.remove("active");
