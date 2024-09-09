@@ -67,6 +67,7 @@ img {
     aspect-ratio: 1/1;
     cursor: pointer;
     background-color: orange;
+    background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
     border-radius: 5px;
     z-index: 4;
     position: fixed;
@@ -79,12 +80,12 @@ img {
         height: 5px;
         border-radius: 5px;
         margin: 10px 0 0 0;
-        background-color: red;
+        background-color: white;
     }
 }
 
 .change div {
-    background-color: orange;
+    background-color: white;
 }
 
 .change {
@@ -180,6 +181,7 @@ nav {
     bottom: 0;
     left: 0;
     background-color: rgba(224, 151, 151, 0.304);
+    background: linear-gradient(90deg, hsla(176, 98%, 48%, 0.3) 0%, hsla(236, 96%, 72%, 0.3) 100%);
     transition: transform 1.5s ease-out;
     width: 300px;
 }
@@ -203,13 +205,16 @@ nav ul li a {
     text-decoration: none;
     color: white;
     transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background: linear-gradient(90deg, #02F1E2 0%, #737BFC 100%);
+    transition: all .3s ease;
 }
 
 nav ul li a:hover {
-    filter: opacity(0.9) brightness(120%) blur(.5px);
+    cursor: pointer;
+    filter: opacity(1) brightness(120%) blur(.5px);
 }
 
-nav ul li:nth-of-type(1) a,
+/* nav ul li:nth-of-type(1) a,
 nav ul li:nth-of-type(6) a {
     background-color: var(--navColor1);
 }
@@ -230,8 +235,7 @@ nav ul li:nth-of-type(4) a {
 
 nav ul li:nth-of-type(5) a {
     background-color: var(--navColor5);
-}
-
+} */
 /* $$$$$$$$$$$ */
 section {
     width: 100%;
@@ -560,7 +564,7 @@ section {
                         }
                     }
 
-                    &:hover {
+                    &:has(:not(.popup:hover)):hover {
                         .item-body {
                             background-color: #091b30;
                             background-color: #4f81f7;
