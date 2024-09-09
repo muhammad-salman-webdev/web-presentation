@@ -9,6 +9,15 @@
     transition: all .3s ease;
 }
 
+:root {
+    --primaryColor: #fff;
+    --navColor1: #21292c;
+    --navColor2: #aa3e39;
+    --navColor3: #aa6e39;
+    --navColor4: #236267;
+    --navColor5: #2c8437;
+}
+
 html::-webkit-scrollbar {
     width: 0;
 }
@@ -28,6 +37,202 @@ img {
     color: transparent;
 }
 
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* $$$$$$$$$$$ */
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 5px;
+    z-index: 4;
+    position: fixed;
+    transform: scale(.5);
+    left: 0;
+    transition: left 1s ease-out;
+
+    &>div {
+        width: 50px;
+        height: 5px;
+        border-radius: 5px;
+        margin: 10px 0 0 0;
+        background-color: red;
+    }
+}
+
+.change div {
+    background-color: orange;
+}
+
+.change {
+    background-color: red;
+    left: 300px;
+}
+
+.change div:nth-child(2) {
+    display: none;
+}
+
+.change div:first-child {
+    transform: rotate(45deg);
+}
+
+.change div:last-child {
+    transform: rotate(-45deg) translate(10px, -11px);
+}
+
+/* All animations */
+/* Slide in */
+.slide-in-1 {
+    animation: slide-in 0.3s linear 0.2s both;
+}
+
+.slide-in-2 {
+    animation: slide-in 0.3s linear 0.4s both;
+}
+
+.slide-in-3 {
+    animation: slide-in 0.3s linear 0.6s both;
+}
+
+.slide-in-4 {
+    animation: slide-in 0.3s linear 0.8s both;
+}
+
+.slide-in-5 {
+    animation: slide-in 0.3s linear 1s both;
+}
+
+.slide-in-6 {
+    animation: slide-in 0.3s linear 1.2s both;
+}
+
+.slide-in-7 {
+    animation: slide-in 0.3s linear 1.4s both;
+}
+
+.slide-in-8 {
+    animation: slide-in 0.3s linear 1.6s both;
+}
+
+/* Slide Out */
+.slide-out-1 {
+    animation: slide-out 0.4s linear 0.5s both;
+}
+
+.slide-out-2 {
+    animation: slide-out 0.4s linear 0.45s both;
+}
+
+.slide-out-3 {
+    animation: slide-out 0.4s linear 0.4s both;
+}
+
+.slide-out-4 {
+    animation: slide-out 0.4s linear 0.3s both;
+}
+
+.slide-out-5 {
+    animation: slide-out 0.4s linear 0.25s both;
+}
+
+.slide-out-6 {
+    animation: slide-out 0.4s linear 0.2s both;
+}
+
+.slide-out-7 {
+    animation: slide-out 0.4s linear 0.15s both;
+}
+
+.slide-out-8 {
+    animation: slide-out 0.4s linear 0.1s both;
+}
+
+/* --- Menu Bars ------------------------------------ */
+/* Menu */
+nav {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(224, 151, 151, 0.304);
+    transition: transform 1.5s ease-out;
+    width: 300px;
+}
+
+.swipe-nav {
+    transform: translateX(-300px);
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12.5vh;
+    justify-content: center;
+    font-size: 23px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+nav ul li a:hover {
+    filter: opacity(0.9) brightness(120%) blur(.5px);
+}
+
+nav ul li:nth-of-type(1) a,
+nav ul li:nth-of-type(6) a {
+    background-color: var(--navColor1);
+}
+
+nav ul li:nth-of-type(2) a,
+nav ul li:nth-of-type(7) a {
+    background-color: var(--navColor2);
+}
+
+nav ul li:nth-of-type(3) a,
+nav ul li:nth-of-type(8) a {
+    background-color: var(--navColor3);
+}
+
+nav ul li:nth-of-type(4) a {
+    background-color: var(--navColor4);
+}
+
+nav ul li:nth-of-type(5) a {
+    background-color: var(--navColor5);
+}
+
+/* $$$$$$$$$$$ */
 section {
     width: 100%;
     height: 100dvh;

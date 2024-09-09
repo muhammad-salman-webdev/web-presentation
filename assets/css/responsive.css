@@ -162,6 +162,10 @@
                 line-height: 31.25px;
                 color: black;
                 gap: 14px;
+                position: absolute;
+                left: 20px;
+                top: 90px;
+                transform: scale(.8);
 
                 .imgs {
                     display: flex;
@@ -370,6 +374,28 @@
             }
         }
     }
+
+    .partner_section {
+        & .container {
+            h1 {
+                font-size: 10px;
+            }
+
+            & .models-container {
+                .model {
+                    width: 25%;
+
+                    h2 {
+                        text-align: center;
+                        font-size: 55px;
+                        font-weight: 600;
+                        line-height: 56px;
+                        margin: 20px 0 16px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:1500px) {
@@ -442,7 +468,7 @@
             }
 
             .genAi-container {
-                transform: scale(0.7) translate(0px, -100px);
+                transform: scale(0.7) translate(0px, 00px);
 
                 .circle {
                     margin: 0 auto 90px;
@@ -554,8 +580,9 @@
             }
 
             .title {
-                font-size: 44px;
-                margin: 20px 0 10px;
+                line-height: 90px;
+                font-size: 36px;
+                margin: 10px 0;
             }
 
             .services-container {
@@ -570,11 +597,16 @@
 
                     h3 {
                         color: white;
-                        font-size: 30px;
+                        font-size: 20px;
                         font-weight: 600;
                         line-height: 40px;
                         text-align: center;
                         margin: auto 0 20px;
+                    }
+
+                    a {
+                        width: 28px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -589,8 +621,9 @@
             }
 
             .title {
-                font-size: 58px;
-                margin: 10px 0
+                line-height: 90px;
+                font-size: 36px;
+                margin: 10px 0;
             }
 
             .models-container {
@@ -608,7 +641,7 @@
             }
 
             .advanctages-container {
-                transform: scale(.6) translate(0, -350px);
+                transform: scale(.4) translate(0, -650px);
             }
         }
     }
